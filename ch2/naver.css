@@ -1,5 +1,12 @@
 /*Cascading style sheet*/
 /*선택자(selector) # = id . = class*/
+/* 클래스와 id의 차이점은 
+id는 고유한 값이고 클래스는 원하는 어디든 적용이 가능 */
+
+/* 에스터리스트 모든 태그에 적용 */
+* {
+    box-sizing: border-box;
+}
 
 .blind { /*사용자의 눈에는 보이지 않지만
     시각장애인들에게 스크립리더로 읽게 만들기 위함*/
@@ -17,20 +24,84 @@
     width: 1080px;
 }
 
-#header-search > h1 {
-    width: 280px;
+#header-search h1 {
+    width: 221px;
+    height: 48px;
     display: inline-block;
+    /* background-image: url(./sp_search.png);
+    background-position: -4px -10px;
+    background-repeat: no-repeat; */
+    background: url(./sp_search.png) 4px -3px no-repeat;
+    vertical-align: middle;
+    position: relative;
+    top: -6px;
+    right: -11px;    
 }
 /*또는  
 #header-center h1 {
 자손 선택자 
 } */
 
+#header-search a {
+    text-decoration: none;
+}
+
+#header-search h1 span {
+    display: none;
+}
+
 #header-search h2 {
     display: none;
 }
 
 #header-search fieldset {
-    width: 520px;
+    margin-left: 20px;
+    /* padding-left: 10px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 0; */
+    padding: 12px 0 12px 10px;
+    width: 521px;
+    height: 49px;
     display: inline-block;
+    border: 2px solid #03cf5d; /*hex 표기법 */
+        /* 굵기   선    색 */
+    vertical-align: middle;
+    position: relative;
 }
+
+#header-search fieldset input {
+    border: none;
+    padding: 0;
+    outline: none;
+    vertical-align: top;
+    width: 405px;
+    height: 23px;
+}
+
+#header-search fieldset button {
+    width: 49px;
+    height: 49px; 
+    border: none;
+    padding: 0;
+    background: #03cf5d;
+    vertical-align: middle;
+    position: absolute; /* 포지션 fieldset 에 설정해줘야함 */
+    right: -2px;
+    top: -2px;
+}
+
+
+#search-image {
+    background-image: url(./sp_search.png);
+    background-position: -3px -60px;
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    margin: 14px;
+}
+
+
+
+
