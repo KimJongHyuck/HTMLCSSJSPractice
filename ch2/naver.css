@@ -8,6 +8,12 @@ id는 고유한 값이고 클래스는 원하는 어디든 적용이 가능 */
     box-sizing: border-box;
 }
 
+/* 브라우저가 기본적으로 주는 마진과 패딩을 기본값으로 해 줌. */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 .blind { /*사용자의 눈에는 보이지 않지만
     시각장애인들에게 스크립리더로 읽게 만들기 위함*/
     position: absolute;
@@ -99,7 +105,10 @@ id는 고유한 값이고 클래스는 원하는 어디든 적용이 가능 */
     width: 21px;
     height: 21px;
     display: inline-block;
-    margin: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 
