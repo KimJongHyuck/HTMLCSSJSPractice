@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #parent, #other, #grand {
+            border: 5px solid tomato;
+        }
+        #grand {
+            position: relative;
+        }
+        #me {
+            background-color: black;
+            color:white;
+            /* html 기준으로 움직임. */
+            position: absolute;
+            left: 0;    
+            top: 0;
+        }
+
+        /* absolute로 되어있는 element는 static이 아닌 부모가 나타날 때 까지
+        무시하다가 static이 아닌 부모가 나타나게 되면 그 부모의 위치를 기준으로 offset값을 지정함. */
+
+    </style>
+</head>
+<body>
+    <div id="other">other</div>
+        <div id="grand">
+            grand
+            <div id="parent">
+            parent
+                <div id="me">me</div>
+            </div>
+        </div>
+</body>
+</html>
