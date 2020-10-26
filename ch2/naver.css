@@ -12,27 +12,13 @@ relative = 상대적 자기 위치를 기준으로 위치를 설정함.*/
     box-sizing: border-box;
 }
 
-<<<<<<< HEAD
+
 /* 브라우저가 기본적으로 주는 마진과 패딩을 기본값으로 해 줌. */
 html, body {
     margin: 0;
     padding: 0;
 }
 
-=======
-#fixed {
-    position: fixed;
-    top: 50px;
-    right: 50px;
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    border-radius: 50px;
-}
-
-
->>>>>>> fixedtest
 .blind { /*사용자의 눈에는 보이지 않지만
     시각장애인들에게 스크립리더로 읽게 만들기 위함*/
     position: absolute;
