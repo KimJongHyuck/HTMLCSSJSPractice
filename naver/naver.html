@@ -9,9 +9,11 @@
 <body>
     <header>
         <div class="center-align"> <!--가운데 정렬용 div-->
-            <span>네이버를 시작 페이지로</span>
-            <span>쥬니어네이버</span>
-            <span>해피빈</span>
+            <div id="header-top">
+                <span>네이버를 시작 페이지로</span>
+                <span>쥬니어네이버</span>
+                <span>해피빈</span>
+            </div>
             <!--span은 inline 이 기본 적용 크기나너비를 빈공간으로 만들 수 없고 자기 값만큼의 크기만 가짐-->
             <!-- <div style="display: inline-block;">해피빈</div>
             inline-block은 크기나너비를 지정하여 빈공간을 만들어줄수있음 -->
@@ -34,7 +36,12 @@
         </div>
     </header>
     <nav>
-        <div class="center-align">
+        <div class="center-align relative">
+            <div id="search-ranking">
+                <h2 class="blind">실시간 검색어</h2>
+                <span id="rank-number">1</span>
+                <div>랭킹</div>
+            </div>
             <ul><!-- unordereed list--> <!-- <ol> ordered list태그는 숫자 1.2.3씩증가-->
                 <li><a href=""><span></span><span class="blind">메일</span></a></li><!-- list item-->
                 <li><a href=""><span></span><span class="blind">카페</span></a></li>
@@ -44,6 +51,7 @@
                 <li><a href=""><span></span><span class="blind">네이버페이</span></a></li>
                 <li><a href=""><span></span><span class="blind">네이버쇼핑</span></a></li>
             </ul>
+            <div class="nav-divider"></div>
         </div>    
     </nav>
     <main>
