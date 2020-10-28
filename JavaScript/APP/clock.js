@@ -7,6 +7,7 @@ function getTime() {
     const hours = date.getHours();
     const seconds = date.getSeconds();
     clockTitle.innerText = `${hours}:${minutes}:${seconds}`;
+    // 주소 테스트
 
 }
 
