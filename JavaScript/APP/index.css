@@ -1,10 +1,8 @@
 body {
     background-color: chocolate;
+    color : #34495e;
 }
 
-h1 {
-    color: white;
-}
 
 .form,
 .greetings {
