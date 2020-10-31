@@ -18,9 +18,7 @@ function deleteToDo(event) {
     console.log(cleanToDos);
     toDos = cleanToDos;
     saveToDos();
-
 }
-
 
 function saveToDos() {
     //Jason.Stringify() 는 자바스크립트 object를 string타입으로 변환.
