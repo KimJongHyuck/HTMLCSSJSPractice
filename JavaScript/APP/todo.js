@@ -7,7 +7,7 @@ const TODOS_LS = 'toDos';
 let toDos = []; 
 
 function deleteToDo(event) {
-    console.log(event.target.parentNode);
+    // console.log(event.target.parentNode);
     const btn = event.target;
     const li = btn.parentNode;
     toDoList.removeChild(li);
@@ -15,7 +15,7 @@ function deleteToDo(event) {
         console.log(toDo.id, li.id);
         return toDo.id !== parseInt(li.id);
     });
-    console.log(cleanToDos);
+    // console.log(cleanToDos);
     toDos = cleanToDos;
     saveToDos();
 }
@@ -35,8 +35,8 @@ function paintToDo(text) {
     const span = document.createElement("span"); // span 생성
     const newId = toDos.length + 1;
     span.innerText = text; // span태그에 text 즉 currentValue = toDoInput.value값을 넣어줌.
-    li.appendChild(span); // li 태그 안에 span 생성
     li.appendChild(delBtn); // li 태그 안에 button 생성
+    li.appendChild(span); // li 태그 안에 span 생성
     li.id = newId; // li에 id 추가
     toDoList.appendChild(li); // //ul태그 안에 li 태그 넣어줌.
 
@@ -61,9 +61,9 @@ function loadToDos() {
     const loadedToDos = localStorage.getItem(TODOS_LS);
     // console.log(toDoForm);
     if(loadedToDos !== null) {
-        console.log(loadedToDos); // local storage에서 불러온 모습
+        // console.log(loadedToDos); // local storage에서 불러온 모습
         const parsedToDos = JSON.parse(loadedToDos);
-        console.log(parsedToDos); // object로 변경
+        // console.log(parsedToDos); // object로 변경
         parsedToDos.forEach(function(toDo) {
             paintToDo(toDo.text);
         });
