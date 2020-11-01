@@ -8,8 +8,20 @@ main axis가 세로, cross axis가 가로  */
     flex-direction: row;
     /* Main Axis */
     justify-content: space-around;
+    align-content: space-around;
+    /* align-content 는 flex-wrap로
+    생긴 item과 item사이의 간격을 조정함 */
+    /* Cross Axis */
+    /* align-items: center; */
     height: 100vh;
-    
+    flex-wrap: wrap;
+    /* flex-wrap: wrap-reverse; */
+    /* flex-wrp은 기본 값은 nowrap.
+    flex속성 설정시 width와 height가
+    바뀌면서까지 정렬되도록 하나
+    wrap속성은 기본 설정 크기를
+    유지하며 정렬시켜준다.
+     */
 }
 
 .child {
@@ -21,16 +33,4 @@ main axis가 세로, cross axis가 가로  */
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.child:nth-child(2) {
-    background: #000;
-    flex-grow: 0;
-    /*flex-grow 는 남은 공간을 일정비율로
-    다 채워줌 default 0 */
-
-    flex-shrink: 1;
-    /* flex-shrink 는 창을 조절할 때
-    줄어드는 크기를 다른 itmes보다 더 많이
-    지정할 수 있음 default 1 */
 }
