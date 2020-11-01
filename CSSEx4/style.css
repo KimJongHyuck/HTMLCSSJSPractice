@@ -5,16 +5,15 @@ flex-direction: column 에서는
 main axis가 세로, cross axis가 가로  */
 .father {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     /* Main Axis */
     justify-content: space-around;
-    height: 100vh;
+    /* height: 100vh; */
     
 }
 
 .child {
-    width: 200px;
-    height: 200px;
+    flex-basis: 200px;
     background: peru;
     color: white;
     font-size: 50px;
