@@ -1,30 +1,40 @@
-/* display : flex를 사용하기 위해서는
-바로 위 부모태그에 속성을 지정해 줘야함.
-*/
-
 /*
 flex-direction: row에서는
 main axis가 가로, cross axis가 세로
-
 flex-direction: column 에서는
 main axis가 세로, cross axis가 가로  */
 .father {
     display: flex;
-    /* row가 default값임. */
     flex-direction: column;
     /* Main Axis */
-    justify-content: center;
+    justify-content: space-around;
     /* Cross Axis */
-    align-items: center;
-    /* flex-direction에 따라
-    main axis나 cross axis 방향으로 변경하고 싶을 때
-    반드시 height 지정해 줘야함 */
-    height: 120vh;
+    /* align-items: center; */
+    height: 100vh;
 }
 
-.box {
+.child {
     width: 200px;
     height: 200px;
     background: peru;
     color: white;
+    font-size: 50px;
+}
+
+.child:nth-child(1) {
+    order: 2;
+}
+
+.child:nth-child(2) {
+    align-self: flex-start;
+    order: 1;
+    /* 순서변경. order의 기본값은 0
+    order를 1로 설정할 경우 나머지 1, 3번은 0이지만
+    2번 박스는 1이 됨
+    HTML을 바꿀 수 없을 때 유용함 */
+}
+
+.child:nth-child(3) {
+    align-self: flex-end;
+    order: 3;
 }
