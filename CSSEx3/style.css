@@ -1,0 +1,30 @@
+/* display : flex를 사용하기 위해서는
+바로 위 부모태그에 속성을 지정해 줘야함.
+*/
+
+/*
+flex-direction: row에서는
+main axis가 가로, cross axis가 세로
+
+flex-direction: column 에서는
+main axis가 세로, cross axis가 가로  */
+.father {
+    display: flex;
+    /* row가 default값임. */
+    flex-direction: column;
+    /* Main Axis */
+    justify-content: center;
+    /* Cross Axis */
+    align-items: center;
+    /* flex-direction에 따라
+    main axis나 cross axis 방향으로 변경하고 싶을 때
+    반드시 height 지정해 줘야함 */
+    height: 120vh;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background: peru;
+    color: white;
+}
