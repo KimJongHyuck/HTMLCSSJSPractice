@@ -1,0 +1,52 @@
+/*
+flex-direction: row에서는
+main axis가 가로, cross axis가 세로
+flex-direction: column 에서는
+main axis가 세로, cross axis가 가로  */
+.father {
+    display: flex;
+    flex-direction: row;
+    /* Main Axis */
+    justify-content: space-around;
+    align-content: space-around;
+    /* Cross Axis */
+    /* align-items: center; */
+    height: 100vh;
+    flex-wrap: wrap;
+    /* flex-wrap: wrap-reverse; */
+    /* flex-wrp은 기본 값은 nowrap.
+    flex속성 설정시 width와 height가
+    바뀌면서까지 정렬되도록 하나
+    wrap속성은 기본 설정 크기를
+    유지하며 정렬시켜준다.
+     */
+}
+
+.child {
+    width: 200px;
+    height: 200px;
+    background: peru;
+    color: white;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child:nth-child(1) {
+    
+}
+
+.child:nth-child(2) {
+    
+    
+    /* 순서변경. order의 기본값은 0
+    order를 1로 설정할 경우 나머지 1, 3번은 0이지만
+    2번 박스는 1이 됨
+    HTML을 바꿀 수 없을 때 유용함 */
+}
+
+.child:nth-child(3) {
+    
+    
+}
