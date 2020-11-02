@@ -1,0 +1,31 @@
+/* display : grid를 사용하기 위해서는
+바로 위 부모태그에 속성을 지정해 줘야함.
+*/
+.grid {
+    display: grid;
+    gap: 5px;
+    height: 50vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    justify-items: center;
+    /* justify-items 기본값 stretch 각 크기에
+    맞게 쫙 늘려줌 
+    start center end 는 각 가로기준으로 정렬 */
+    align-items: center;
+}
+
+.header {
+    background-color: #2ecc71;
+}
+
+.content {
+    background-color: #3498db;
+}
+
+.nav {
+    background-color: #8c44ad;
+}
+
+.footer {
+    background-color: #f39c12;
+}
