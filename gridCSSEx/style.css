@@ -1,0 +1,26 @@
+/* display : grid를 사용하기 위해서는
+바로 위 부모태그에 속성을 지정해 줘야함.
+*/
+
+.father {
+    display: grid;
+    /* 각 컬럼(height)별 크기 지정 . */
+    grid-template-columns: 250px 250px 250px;
+    /* 각 로우(witdh)별 크기 지정 */
+    grid-template-rows: 100px 50px 200px;
+    /* 컬럼과 컬럼사이 간격 지정  */
+    gap: 10px;
+    /* column-gap: 10px;
+    row-gap: 10px; */
+    
+}
+
+.child {
+    background: peru;
+    color: white;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
