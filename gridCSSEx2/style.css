@@ -1,0 +1,42 @@
+/* display : grid를 사용하기 위해서는
+바로 위 부모태그에 속성을 지정해 줘야함.
+*/
+
+
+.grid {
+    display: grid;
+    /* grid-template-columns: 150px 150px 150px 150px;
+     */
+     grid-template-columns: repeat(4, 200px);
+     /* 혹은 auto 200px 은 가능한만큼 크게됌 */
+    /* grid-template-rows: 100px 100px 100px 100px; */
+    grid-template-rows: 100px repeat(2, 200px) 100px;
+
+    grid-template-areas: 
+    "header header header header"
+    "content content content nav"
+    "content content content nav"
+    "footer footer footer footer";
+}
+/* grid-template-areas 는 기존
+CSS선택자와는 관련없이 사용할 CSS안에서 
+gird-area로 이름을 지정해 줘야함. */
+.header {
+    background-color: #2ecc71;
+    grid-area: header;
+}
+
+.content {
+    background-color: #3498db;
+    grid-area: content;
+}
+
+.nav {
+    background-color: #8c44ad;
+    grid-area: nav;
+}
+
+.footer {
+    background-color: #f39c12;
+    grid-area: footer;
+}
