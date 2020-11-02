@@ -14,6 +14,8 @@ main axis가 세로, cross axis가 가로  */
 
 .child {
     flex-basis: 200px;
+    /* flex-basis는 main axis에서 적용됨
+     */
     background: peru;
     color: white;
     font-size: 50px;
