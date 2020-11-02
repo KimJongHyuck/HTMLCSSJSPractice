@@ -10,28 +10,38 @@
 
 .header {
     background-color: #2ecc71;
-    grid-column-start: 1;
+    /* grid-column-start: 1; */
+    /* grid-column-end: 5; */
     /* column의 갯수에서 시작과 끝이 아니라
     사각형의 면(라인)에서 숫자를 셈 */
-    grid-column-end: 5;
+    /* grid-column: 1 / -1; */
+    grid-column: span 4;
 }
 
 .content {
     background-color: #3498db;
-    grid-column-start: 1;
+    /* grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 2;
-    grid-row-end: 4;
+    grid-row-end: 4; */
+    grid-column: 1 / -2;
+    grid-row: 2 / 4;
 }
 
 .nav {
     background-color: #8c44ad;
-    grid-row-start: 2;
-    grid-row-end: 4;
+    /* grid-row-start: 2;
+    grid-row-end: 4; */
+    grid-row: 2 / 4;
 }
 
 .footer {
     background-color: #f39c12;
-    grid-column-start: 1;
-    grid-column-end: 5;
+    /* grid-column-start: 1;
+    grid-column-end: 5; */
+    /* grid-column: 1 / -1; */
+    /* 끝에서부터 -1씩 1씩 감소하기 때문에
+    시작부터 끝가지 다 채워줄 경우 -1을 쓰는게
+    계산을 하지 않아도 됌. */
+    grid-column: span 4;
 }
