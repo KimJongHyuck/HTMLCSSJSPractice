@@ -3,37 +3,21 @@
 */
 .grid {
     display: grid;
-    gap: 10px;
-    height: 50vh;
-    /* fraction은 사용가능한 공간 */
-    /* grid-template-columns: repeat(4, 1fr); */
-    /* rows에 fr을 적용할 경우 grid의 높이를 지정해
-    줘야함. */
-    /* grid-template-rows: repeat(4, 1fr); */
-    grid-template: 
-    "header header header header" 1fr /*1fr은 row의 높이*/
-    "content content content nav" 2fr
-    "footer footer footer footer" 1fr / 1fr 1fr 1fr 1fr
-    ;
+    gap: 5px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    /* div가 더 추가되면 자동으로 100px씩 만들어줌 */
+    /* grid-auto-rows: 100px; */
+
+    /* row가 추가되는게 아닌 column으로 추가됨 */
+    grid-auto-flow: column;
+    grid-auto-columns: 100px;
 }
 
-.header {
+.item:nth-child(odd) {
     background-color: #2ecc71;
-    grid-area: header;
-    
 }
 
-.content {
+.item:nth-child(even) {
     background-color: #3498db;
-    grid-area: content;
-}
-
-.nav {
-    background-color: #8c44ad;
-    grid-area: nav;
-}
-
-.footer {
-    background-color: #f39c12;
-    grid-area: footer;
 }

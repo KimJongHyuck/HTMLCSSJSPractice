@@ -25,6 +25,10 @@
 
 .header {
     background-color: #2ecc71;
+      /* 각 child별 각각움직이게 하는 방법. */
+    /* align-self: end;
+    justify-self: center; */
+    /* place-self: end center; */
 }
 
 .content {
