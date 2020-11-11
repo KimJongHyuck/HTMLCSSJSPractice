@@ -1,0 +1,17 @@
+/* display : grid를 사용하기 위해서는
+바로 위 부모태그에 속성을 지정해 줘야함.
+*/
+.grid {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(5, minmax(max-content), 1fr);
+    grid-auto-rows: 100px;
+}
+
+.item:nth-child(odd) {
+    background-color: #2ecc71;
+}
+
+.item:nth-child(even) {
+    background-color: #3498db;
+}
